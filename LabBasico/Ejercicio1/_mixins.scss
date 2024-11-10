@@ -1,0 +1,35 @@
+@use 'sass:color';
+@use '_functions';
+
+@mixin grid-layuot($section-name){
+  @if($section-name == 'exercise-1'){
+    grid-template-columns: repeat(4, 1fr) 1.2fr repeat(4, 1fr);
+  }  
+}
+
+@mixin create-palette($base-color, $palette-name) {
+    .#{$palette-name} {
+      @for $i from 1 through 4 {
+        $background-color: color.adjust($base-color, $lightness: -($i * 10%));
+
+        .darken-#{$i} { 
+          background-color:  $background-color;
+          border-color: $base-color;
+          color: text-color($background-color);
+        }
+      }
+
+      .base-color { background-color: $base-color;border-color: $base-color; }
+
+      @for $i from 1 through 4 {
+        $background-color :  color.adjust($base-color, $lightness: $i * 10%);
+        .lighten-#{$i} { 
+          background-color: $background-color;
+          border-color: $base-color;
+          color: text-color($background-color);
+        }
+      }
+    }
+  }
+
+  

@@ -1,0 +1,8 @@
+
+
+@function text-color($background-color) {
+  $lightness-value: lightness($background-color);    
+  @return color.adjust(gray, $blackness: calc($lightness-value / 2) + $lightness-value);  
+}
+
+  

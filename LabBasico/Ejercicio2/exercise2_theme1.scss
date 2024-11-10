@@ -1,0 +1,44 @@
+@use "_base";
+@use "_typography" as *;
+@use "_comun" as *;
+@use "_variables" as var;
+
+.color-box {
+  border-radius: var.$border-radius-1;
+  @extend .box;
+  @extend .font_theme1_secondary;
+}
+
+.base {
+  background-color: var.$base-color-1;
+}
+
+.important {
+  background-color: adjust-color(var.$base-color-1, $lightness: -30%);
+}
+
+.warning {
+  background-color: adjust-color(var.$base-color-1,$saturation: 80%, $lightness: 10%);
+}
+
+.primary-font {
+  margin: 10px 0;
+  @extend .font_theme1_principal;
+}
+
+.secondary-font {
+  margin: 10px 0;
+  @extend .font_theme1_secondary;
+}
+
+/* Caja con sombra */
+.box-shadow {
+  @extend .box-shadow-base;
+  @extend .font_theme1_secondary;
+  border-radius: var.$border-radius-1;
+  box-shadow: -13px 15px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.title::after {
+  content: " Theme 1";
+}

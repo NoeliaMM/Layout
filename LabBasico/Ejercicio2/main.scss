@@ -1,0 +1,24 @@
+@use "_typography" as font;
+@use "exercise2_theme2";
+
+header {
+  background-color: black;
+  height: 45px;
+  padding: 25px;
+  font-size: font.$font-size-h1;
+  font-family: font.$font-family-base;
+  font-weight: bold;
+  text-align: center;
+  align-content: center;
+  color: white;
+}
+
+.title {
+  font-family: font.$font-family-base;
+  padding: 25px;
+}
+
+.container {
+  padding: 10px;
+  justify-items: center;
+}

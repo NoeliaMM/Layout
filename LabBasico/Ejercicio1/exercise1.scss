@@ -1,0 +1,28 @@
+@use "_base";
+@use "_typography" as font;
+@use "_variables" as var;
+@use "../_mixins";
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  @include mixins.grid-layuot("exercise-1");
+}
+
+.box {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  border: 2px;
+  border-radius: 5px;
+  font-size: font.$font-size-base;
+  font-family: font.$font-family;
+}
+
+@include mixins.create-palette(var.$base-color-1, "palette-1");
+@include mixins.create-palette(var.$base-color-2, "palette-2");
+@include mixins.create-palette(var.$base-color-3, "palette-3");

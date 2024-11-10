@@ -1,0 +1,46 @@
+@use "_base";
+@use "_typography" as font;
+@use "_comun" as *;
+@use "_variables" as var;
+
+/* Colores */
+.color-box {
+  border-radius: var.$border-radius-2;
+  @extend .box;
+  @extend .font_theme2_secondary;
+}
+
+.base {
+  background-color: var.$base-color-3;
+}
+
+.important {
+  background-color: adjust-color(var.$base-color-3, $lightness: -30%);
+}
+
+.warning {
+  background-color: adjust-color( var.$base-color-3, $saturation: 80%, $lightness: 20%);
+}
+
+/* Tipografías */
+.primary-font {
+  margin: 10px 0;
+  @extend .font_theme2_principal;
+}
+
+.secondary-font {
+  margin: 10px 0;
+  @extend .font_theme2_secondary;
+}
+
+/* Caja con sombra */
+.box-shadow {
+  @extend .box-shadow-base;
+  @extend .font_theme2_secondary;
+  border-radius: var.$border-radius-2;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.title::after {
+  content: " Theme 2";
+}

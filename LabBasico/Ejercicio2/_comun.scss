@@ -1,0 +1,23 @@
+@use "_typography" as *;
+
+.box {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: white;
+  font-size: $font-size-2;
+}
+
+.box-shadow-base {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000000;
+}

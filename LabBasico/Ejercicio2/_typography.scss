@@ -1,0 +1,66 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-size-h1: 34px;
+$font-size-1: 1.2em;
+$font-size-2: 1em;
+$font-family-base:  'Roboto', sans-serif;
+$font-variant-medium: "medium"; 
+$font-variant-ligth: "ligth"; 
+$font-weight-principal: 500;
+$font-weight-secondary: 300;
+
+.font_weight_principal{
+    font-weight: $font-weight-principal; 
+    font-size: $font-size-1
+ } 
+ 
+ .font_weight_secondary{
+     font-weight: $font-weight-secondary;
+     font-size: $font-size-2
+ } 
+
+//Tema 1
+.montserrat-#{$font-variant-medium} {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;   
+    font-style: normal;
+    @extend .font_weight_principal;
+}
+
+.montserrat-#{$font-variant-ligth} {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;   
+    font-style: normal;
+    @extend .font_weight_secondary;
+}
+
+.font_theme1_principal{
+    @extend .montserrat-#{$font-variant-medium};  
+}
+
+.font_theme1_secondary{
+    @extend .montserrat-#{$font-variant-ligth};    
+}
+
+//Tema 2
+.comic-neue-#{$font-variant-medium}  {
+    font-family: "Comic Neue", cursive;
+    font-style: normal;
+    @extend .font_weight_principal;
+}
+
+.comic-neue-#{$font-variant-ligth}  {
+    font-family: "Comic Neue", cursive;
+    font-style: italic;
+    @extend .font_weight_secondary;
+}
+
+.font_theme2_principal{
+    @extend .comic-neue-#{$font-variant-medium};   
+}
+
+.font_theme2_secondary{
+    @extend .comic-neue-#{$font-variant-ligth};
+}
