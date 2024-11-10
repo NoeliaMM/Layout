@@ -1,3 +1,6 @@
+
+#####LABORATORIO BASICO#####
+
 #EJERCICIO 1: Ejercicio 1: Crear una paleta de colores dinámica. 
   En archivo exercise1 importo los mixins para crear la 3 paletas de colores.
   El mixin create_pallete incluye dos iteraciones para añadir un background u otro en funcion de la clase darken o ligthen
